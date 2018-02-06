@@ -269,7 +269,6 @@ define java::oracle (
             path        => '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin',
             command     => $install_command,
             creates     => $creates_path,
-            refreshonly => true, 
             unless      => ['test -f /usr/bin/java'],
             require     => Archive[$destination]
           }
